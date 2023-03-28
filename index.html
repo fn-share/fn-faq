@@ -197,13 +197,11 @@ window.addEventListener('load', function() {
   window.addEventListener('hashchange',onHashChange,false);
   
   setTimeout( () => {
-    console.log('here1',window.innerWidth,window.innerHeight)
-    setTimeout( () => console.log('here2',window.innerWidth,window.innerHeight), 2000);
     if (window.innerWidth < 576) {  // min width of media is 576px
       $('#md-nav-root').addClass('d-none');
       mdNavShowing = false;
     }
-  }, 300);
+  }, 600);
   
   getMdFileList(2, data => {  // try 2 more times when failed
     if (data === null) return;
