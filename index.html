@@ -197,7 +197,7 @@ window.addEventListener('load', function() {
   window.addEventListener('hashchange',onHashChange,false);
   
   setTimeout( () => {
-    if (window.innerWidth < 576) {  // min width of media is 576px
+    if (window.outerWidth < 576) {  // min width of media is 576px
       $('#md-nav-root').addClass('d-none');
       mdNavShowing = false;
     }
